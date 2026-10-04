@@ -26,7 +26,7 @@ A minimal dark theme for [Jellyfin](https://jellyfin.org). Slate background, an 
 2. In **Custom CSS code**, paste:
 
    ```css
-   @import url('https://cdn.jsdelivr.net/gh/YOUR_USER/dashline@main/dashline.css');
+   @import url('https://cdn.jsdelivr.net/gh/lethamburn/dashline@main/dashline.css');
    ```
 
 3. Click **Save**, then hard-refresh (`Ctrl/Cmd + Shift + R`).
