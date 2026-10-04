@@ -93,6 +93,45 @@ h1, h2, h3, h4 { font-family: var(--dl-font); letter-spacing: -.01em; }
   letter-spacing: .04em;
   font-size: 1.05em;
 }
+.headerTop {
+  min-height: 3.6em;
+  padding-top: .55em !important;
+  padding-bottom: .55em !important;
+  align-items: center;
+  box-sizing: border-box;
+}
+.pageTitleWithLogo, .pageTitleWithDefaultLogo {
+  height: 2.1em !important;
+  min-height: 2.1em;
+  background-size: contain !important;
+  background-position: left center !important;
+  background-repeat: no-repeat;
+  overflow: visible;
+  text-transform: none;
+}
+.skinHeader { overflow: visible !important; contain: none !important; height: auto !important; }
+/* Wide screens: Jellyfin pulls the tabs into the top row with negative margins,
+   which clips the logo/icons once the header is taller. Center them absolutely instead. */
+@media (min-width: 100em) {
+  .skinHeader { position: fixed; }
+  .headerTop { min-height: 4.2em; }
+  .pageTitleWithLogo, .pageTitleWithDefaultLogo { height: 2.4em !important; min-height: 2.4em; }
+  .headerTabs, .skinHeader .headerTabs {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    margin: 0 !important;
+    height: 4.2em !important;
+    width: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    pointer-events: none;
+  }
+  .headerTabs > * { pointer-events: auto; }
+  .headerTabs .emby-tab-button { padding: .7em 1em !important; }
+}
 .headerButton, .headerTop .paper-icon-button-light {
   color: var(--dl-text-2);
   border-radius: var(--dl-radius);
