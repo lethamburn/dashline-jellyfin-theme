@@ -84,11 +84,3 @@ Example accents:
 ## Uninstall
 
 Clear the **Custom CSS code** field, save, and refresh.
-
-## Contributing
-
-Issues and PRs are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## License
-
-[MIT](LICENSE). Not affiliated with Jellyfin, Letterboxd or Anthropic.
