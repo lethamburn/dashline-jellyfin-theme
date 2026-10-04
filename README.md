@@ -2,7 +2,7 @@
 
 A minimal dark theme for [Jellyfin](https://jellyfin.org). Slate background, an orange accent, dashed hairlines, and poster cards with thin frames. The look borrows from film-diary apps and dashboard UIs.
 
-![Dashline preview](screenshots/home.png)
+![Dashline preview](home.png)
 
 > Pure CSS. No plugins, no server changes. Works with Jellyfin Web **10.9, 10.10 and 10.11**.
 
