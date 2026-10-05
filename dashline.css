@@ -57,6 +57,22 @@ body, .emby-button, .emby-input, .emby-select, .emby-textarea, button, input, se
   background-color: var(--dl-bg);
 }
 .backgroundContainer.withBackdrop { background-color: rgba(26, 29, 34, .9) !important; }
+/* Video playback: everything above the <video> must stay transparent */
+html.transparentDocument, .transparentDocument body, body.transparentDocument,
+.transparentDocument .backgroundContainer, .transparentDocument .mainAnimatedPage,
+#videoOsdPage, #videoOsdPage.page, .videoOsdPage, .mainAnimatedPage#videoOsdPage,
+.videoPlayerContainer, .htmlVideoPlayerContainer {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+/* Letterbox / pillarbox area behind the video must be black */
+.videoPlayerContainer, .htmlVideoPlayerContainer, .videoPlayerContainer video, .htmlvideoplayer {
+  background: #000 !important;
+  background-color: #000 !important;
+}
+html.transparentDocument, .transparentDocument body, body.transparentDocument { background-color: #000 !important; }
+.transparentDocument .skinHeader:not(.osdHeader) { background: transparent !important; border-bottom: 0 !important; backdrop-filter: none !important; }
+.videoPlayerContainer video, .htmlvideoplayer { filter: none !important; opacity: 1 !important; }
 ::selection { background: var(--dl-accent); color: var(--dl-accent-ink); }
 a, .button-link { color: var(--dl-accent); }
 a:hover, .button-link:hover { color: var(--dl-accent-hover); }
